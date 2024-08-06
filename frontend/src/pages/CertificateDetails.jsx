@@ -32,7 +32,9 @@ const CertificateDetails = () => {
         certificate={certificate}
         company={company}
       />
+      <div style={{ marginTop: '50px' }}>
       <CredentialVerification />
+      </div>
     </div>
   );
 };
