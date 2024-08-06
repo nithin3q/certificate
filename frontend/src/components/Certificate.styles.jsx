@@ -9,7 +9,7 @@ const styleSheet = (primary = "#007bff", secondary = "#00c851", primarys = "#225
         position: 'relative',
         margin: 'auto',
         borderRadius: '8px', // Increased border radius for a modern look
-        background: '#FAFBFF', // Light, neutral background color
+        background: '#dee2e9', // Light, neutral background color
       },
       'styled-div': {
         '& > img': {

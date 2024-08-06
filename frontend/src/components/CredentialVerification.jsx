@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
     padding: '20px',
     maxWidth: '400px',
     margin: 'auto',
-    background: '#fff',
+    background: '#dee2e9',
     textAlign: 'left', // Align text to the left
     position: 'relative'
 
@@ -24,7 +24,7 @@ const useStyles = createUseStyles({
   section: {
     marginBottom: '15px',
     fontSize: '18px',
-    color: '#105236',
+    color: '#000',
     display: 'flex',
     alignItems: 'center', // Align items vertically centered
     gap: '10px', // Add space between image and text
@@ -65,7 +65,7 @@ const CredentialVerification = () => {
 
   useEffect(() => {
     // Fetch data from the API
-    fetch('http://localhost:5000/api/credential')
+    fetch('https://certificate-05bu.onrender.com/api/credential')
       .then(response => response.json())
       .then(data => setData(data))
       .catch(error => console.error('Error fetching data:', error));

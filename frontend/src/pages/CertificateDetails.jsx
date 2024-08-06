@@ -12,7 +12,7 @@ const CertificateDetails = () => {
   useEffect(() => {
     const fetchCertificate = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/certificates/${id}`);
+        const response = await axios.get(`https://certificate-05bu.onrender.com/api/certificates/${id}`);
         setCertificate(response.data.certificate);
         setCompany(response.data.company);
       } catch (error) {
