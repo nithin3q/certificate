@@ -1,0 +1,218 @@
+/* Header Styles */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #225572;
+    border-bottom: 0px solid #E8E9ED;
+    z-index: 123;
+  }
+  
+  /* Main Header Styles */
+  .header .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 78px;
+    
+    
+  }
+  
+  /* Sticky Bar Styles */
+  .sticky-bar.stick {
+    background: #2D4554;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1004;
+    transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  
+  /* Header Logo */
+  .header .header-logo a {
+    display: flex;
+    cursor: pointer;
+  }
+  
+  .header .header-logo img {
+    alt: "aquar labs";
+  }
+  
+  /* Header Menu */
+  .header .header-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .nav-main-menu {
+    padding-left: 10px;
+  }
+  
+  .header .main-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .header .main-menu > li {
+    padding: 23px 0;
+    position: relative;
+  }
+  
+  /* Menu Links */
+  .header .main-menu li a {
+    font-family: "Fahkwang", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 24px;
+    display: block;
+    padding: 5px 33px 5px 15px;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .header .main-menu li a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: 40px;
+  }
+  
+  /* Sub-menu Styles */
+  .header .main-menu li div.sub-menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    width: 420px;
+    border-radius: 21px;
+    padding: 10px 22px;
+    background-color: rgba(67, 120, 151, 0.624);
+    box-shadow: 0px 5px 30px rgba(19, 27, 34, 0.12);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  
+  .header .main-menu li div.sub-menu .menu-inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .header .main-menu li div.sub-menu .menu-inner li {
+    width: 50%;
+  }
+  
+  /* Sub-menu Links */
+  .header .main-menu li div.sub-menu .menu-inner li a {
+    padding: 0 22px;
+    border-radius: 50px;
+  }
+  
+  .header .main-menu li ul {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    border-radius: 21px;
+    padding: 10px 12px;
+    background-color: #05131b9f;
+    box-shadow: 0px 5px 30px rgba(19, 27, 34, 0.12);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  
+  .header .main-menu li ul li {
+    width: 100%;
+    margin-bottom: 2px;
+  }
+  
+  .header .main-menu li ul li a {
+    font-size: 14px;
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 50px;
+    transition: 0.2s;
+  }
+  
+  .header .main-menu li ul li a:hover {
+    transition: 0.2s;
+  }
+  
+  /* Header Account */
+  .header .header-account {
+    display: flex;
+  }
+  
+  .header .header-account .dark-light-mode {
+    height: 30px;
+    width: 30px;
+    background: url('https://aquarlabs.com/assets/imgs/template/icons/dark.svg') no-repeat center;
+  }
+  
+  .header .header-account .dark-light-mode.dark-mode {
+    background: url('https://aquarlabs.com/assets/imgs/template/icons/light.svg') no-repeat center;
+  }
+  
+  .header .header-account .menu-mobile {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  /* Mobile Menu Icon */
+  .header .header-account .menu-mobile img {
+    height: auto;
+    width: 25px;
+  }
+  
+  /* Comet Animation */
+  .comet-horizontal {
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 80px;
+    background: linear-gradient(90deg, transparent, #fff);
+    animation: comet 5s infinite linear;
+  }
+  
+  @keyframes comet {
+    0% {
+      left: 0;
+      transform: translate(-100%);
+    }
+    100% {
+      left: 100%;
+      transform: translate(0%);
+    }
+  }
+  
+ 
+.hover-rotate {
+    display: inline-block; /* Ensure it respects transformations */
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-rotate:hover {
+    animation: rotate 1s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
