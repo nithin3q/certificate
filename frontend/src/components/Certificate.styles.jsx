@@ -10,13 +10,15 @@ const styleSheet = (primary = "#007bff", secondary = "#00c851", primarys = "#225
       margin: 'auto',
       borderRadius: '0.5vw',
       background: '#eceef4',
+      backgroundImage: `url('../assets/5386357.jpg')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
       boxSizing: 'border-box',
       '@media (max-width: 768px)': {
         maxWidth: '100vw', // For small devices
         width: '95vw', // For small devices
         padding: '4vw',
       },
-      
     },
     'styled-div': {
       '& > img': {
@@ -55,10 +57,7 @@ const styleSheet = (primary = "#007bff", secondary = "#00c851", primarys = "#225
       lineHeight: "1.2",
       '@media (min-width: 1200px)': { // Larger devices
         fontSize: "2.5vw", // Decrease font size
-        
-
       },
-
     },
     'certificate-text': {
       '& .name': {

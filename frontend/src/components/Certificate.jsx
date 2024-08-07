@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import { createUseStyles } from 'react-jss';
 import stylesheet from './Certificate.styles';
+import bg from '../assets/5570863.jpg'
 
 const Certificate = ({ uuid, certificate, company }) => {
 
@@ -47,7 +48,8 @@ const Certificate = ({ uuid, certificate, company }) => {
   const classes = createUseStyles(stylesheet(primaryColor, secondaryColor))();
 
   return (
-    <div className={classes['certificate-container']}>
+    <div className={classes['certificate-container']} style={{ backgroundImage: `url(${bg})` }}>
+      
       <a href={website} target="_blank" rel="noopener noreferrer">
         <div className={classes['styled-div']}>
           <img src={logoURL} alt="Company logo" />
