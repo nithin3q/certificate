@@ -1,11 +1,11 @@
 import React from 'react';
 import moment from 'moment';
 import { createUseStyles } from 'react-jss';
+import QRCode from 'qrcode.react';
 import stylesheet from './Certificate.styles';
-import bg from '../assets/5570863.jpg'
+import bg from '../assets/5570863.jpg';
 
 const Certificate = ({ uuid, certificate, company }) => {
-
   const getDifference = (startDate, endDate) => {
     const diff = Math.ceil(moment(endDate).diff(moment(startDate), 'months', true));
     
@@ -45,11 +45,13 @@ const Certificate = ({ uuid, certificate, company }) => {
   const secondaryColor = company[4];
   const difference = getDifference(startDate, endDate);
 
+  // Get the current URL
+  const currentURL = `${window.location.origin}/certificate/${uuid}`;
+
   const classes = createUseStyles(stylesheet(primaryColor, secondaryColor))();
 
   return (
     <div className={classes['certificate-container']} style={{ backgroundImage: `url(${bg})` }}>
-      
       <a href={website} target="_blank" rel="noopener noreferrer">
         <div className={classes['styled-div']}>
           <img src={logoURL} alt="Company logo" />
@@ -58,23 +60,29 @@ const Certificate = ({ uuid, certificate, company }) => {
       <div className={classes['main-content']}>
         <p className={classes['main-heading']}>
           <span>Certificate </span>
-            of Achievement</p>
+          of Achievement
+        </p>
         <p className={classes['certificate-text']}>
           This certificate is presented to
-            <span className='name'>{name}</span>
-            For successfully completing his/her tenure as&nbsp;
-            <span>{position}</span> from&nbsp;
-            <span>{moment(startDate).format('MMMM Do YYYY')}</span> to&nbsp;
-            <span>{moment(endDate).format('MMMM Do YYYY')}</span>&nbsp;
-            {difference ? `(${difference})` : ''}
+          <span className='name'>{name}</span>
+          For successfully completing his/her tenure as&nbsp;
+          <span>{position}</span> from&nbsp;
+          <span>{moment(startDate).format('MMMM Do YYYY')}</span> to&nbsp;
+          <span>{moment(endDate).format('MMMM Do YYYY')}</span>&nbsp;
+          {difference ? `(${difference})` : ''}
         </p>
       </div>
       <div className={classes['certificate-footer']}>
-        <div>
-          <p className={classes['issuer']}>{user}</p>
-          <p className={classes['issuer-designation']}>{designation} at {companyName}</p>
+        <div className={classes['footer-content']}>
+          <div className={classes['qr-code-container']}>
+            <QRCode value={currentURL} size={128} />
+          </div>
+          <div className={classes['designation-container']}>
+            <p className={classes['issuer']}>{user}</p>
+            <p className={classes['issuer-designation']}>{designation} at {companyName}</p>
+          </div>
+          <p className={classes['issued-date']}>{moment(awardedAt).format('Do MMMM, YYYY.')}</p>
         </div>
-        <p className={classes['issued-date']}>{moment(awardedAt).format('Do MMMM, YYYY.')}</p>
       </div>
       <p className={classes['certificate-uuid']}>{uuid}</p>
     </div>

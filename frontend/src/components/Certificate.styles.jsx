@@ -2,8 +2,8 @@ const styleSheet = (primary = "#007bff", secondary = "#00c851", primarys = "#225
   return {
     'certificate-container': {
       border: `2px solid ${primarys}`,
-      maxWidth: '60vw', // Default for larger devices
-      width: '60vw', // Default for larger devices
+      maxWidth: '60vw',
+      width: '60vw',
       minWidth: '300px',
       padding: '2vw',
       position: 'relative',
@@ -15,8 +15,8 @@ const styleSheet = (primary = "#007bff", secondary = "#00c851", primarys = "#225
       backgroundPosition: 'center',
       boxSizing: 'border-box',
       '@media (max-width: 768px)': {
-        maxWidth: '100vw', // For small devices
-        width: '95vw', // For small devices
+        maxWidth: '100vw',
+        width: '95vw',
         padding: '4vw',
       },
     },
@@ -50,20 +50,23 @@ const styleSheet = (primary = "#007bff", secondary = "#00c851", primarys = "#225
         display: "block",
         fontSize: "4.9vw",
         fontWeight: "700",
+        '@media (min-width: 1200px)': {
+          fontSize: "3.3vw",
+        },
       },
       color: primarys,
       fontSize: "3vw",
       marginBottom: "2vw",
       lineHeight: "1.2",
-      '@media (min-width: 1200px)': { // Larger devices
-        fontSize: "2.5vw", // Decrease font size
+      '@media (min-width: 1200px)': {
+        fontSize: "2.0vw",
       },
     },
     'certificate-text': {
       '& .name': {
         color: primarys,
         display: "block",
-        fontSize: "5vw",
+        fontSize: "4vw",
         width: "fit-content",
         margin: "0 auto 1.5vw",
         padding: "0 2vw",
@@ -75,23 +78,26 @@ const styleSheet = (primary = "#007bff", secondary = "#00c851", primarys = "#225
       fontSize: "2.7vw",
       fontFamily: "'Roboto', sans-serif",
       lineHeight: "1.5",
-      '@media (min-width: 1200px)': { // Larger devices
-        fontSize: "1.8vw", // Decrease font size
+      '@media (min-width: 1200px)': {
+        fontSize: "1.8vw",
       },
     },
     'certificate-footer': {
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      color: "#666",
-      fontSize: "1.5vw",
       width: "100%",
       margin: "2vw auto 0",
       fontFamily: "'Roboto', sans-serif",
-      textAlign: "center",
-      '@media (min-width: 1200px)': { // Larger devices
-        fontSize: "1.2vw", // Decrease font size
-      },
+    },
+    'footer-content': {
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+    },
+    'qr-code-container': {
+      marginRight: 'auto',
+    },
+    'designation-container': {
+      textAlign: 'center',
+      flex: 1,
     },
     'issuer': {
       margin: "0",
@@ -100,14 +106,17 @@ const styleSheet = (primary = "#007bff", secondary = "#00c851", primarys = "#225
     'issuer-designation': {
       margin: "0",
     },
+    'issued-date': {
+      marginLeft: 'auto',
+    },
     'certificate-uuid': {
       textAlign: "center",
       fontSize: "1vw",
       fontWeight: "300",
       marginBottom: "-1vw",
       fontFamily: "'Roboto', sans-serif",
-      '@media (min-width: 1200px)': { // Larger devices
-        fontSize: "0.9vw", // Decrease font size
+      '@media (min-width: 1200px)': {
+        fontSize: "0.9vw",
       },
     },
   }
