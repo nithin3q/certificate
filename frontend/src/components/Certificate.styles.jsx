@@ -86,6 +86,10 @@ const styleSheet = (primary = "#007bff", secondary = "#00c851", primarys = "#225
       width: "100%",
       margin: "2vw auto 0",
       fontFamily: "'Roboto', sans-serif",
+      fontSize: "2.2vw",
+      '@media (min-width: 1200px)': {
+        fontSize: "1.2vw",
+      }
     },
     'footer-content': {
       display: 'flex',
@@ -94,6 +98,17 @@ const styleSheet = (primary = "#007bff", secondary = "#00c851", primarys = "#225
     },
     'qr-code-container': {
       marginRight: 'auto',
+      '@media (max-width: 768px)': {
+        marginRight: '0',
+      },
+    },
+    'qr-code': {
+      width: '128px !important',
+      height: '128px !important',
+      '@media (max-width: 768px)': {
+        width: '80px !important',
+        height: '80px !important',
+      },
     },
     'designation-container': {
       textAlign: 'center',

@@ -1,0 +1,18 @@
+.qr-code-container-0-2-22 canvas {
+    height: 105px !important;
+    width: 105px !important;
+}
+@media (max-width: 967px) {
+    .qr-code-container-0-2-22 canvas {
+      height: 85px !important;
+      width: 85px !important;
+    }
+  }
+  
+  /* For devices with a max width of 767px */
+  @media (max-width: 767px) {
+    .qr-code-container-0-2-22 canvas {
+      height: 55px !important;
+      width: 55px !important;
+    }
+  }

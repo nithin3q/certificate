@@ -75,7 +75,17 @@ const Certificate = ({ uuid, certificate, company }) => {
       <div className={classes['certificate-footer']}>
         <div className={classes['footer-content']}>
           <div className={classes['qr-code-container']}>
-            <QRCode value={currentURL} size={128} />
+          <QRCode 
+              value={currentURL} 
+              style={{ 
+                width: '128px', 
+                height: '128px',
+                '@media (max-width: 768px)': {
+                  width: '80px',
+                  height: '80px',
+                }
+              }} 
+            />
           </div>
           <div className={classes['designation-container']}>
             <p className={classes['issuer']}>{user}</p>
